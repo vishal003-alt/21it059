@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #272343;
+            color: #fff;
+            padding: 1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffc107;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section#home {
+            background-color: #272343;
+            color: #fff;
+            text-align: center;
+            padding: 40px;
+            border-radius: 50%/70% 50%;
+            overflow: hidden;
+        }
+
+        section#home h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        section#home p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #272343;
+            margin-bottom: 40px;
+        }
+
+        section#products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .product {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+            transition: transform 0.3s ease;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+        }
+
+        .product img {
+            border-radius: 8px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .product h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #272343;
+        }
+
+        .product p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .product button {
+            background-color: #ffc107;
+            color: #272343;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .product button:hover {
+            background-color: #ffdd7d;
+            color: #272343;
+        }
+    
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo" style="font-size: 2rem; font-weight: bold;">My-Ecommerce</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="laptop.html">Laptop</a></li>
+            <li><a href="log.html">Log</a></li>
+            <li><a href="tv.html">TV</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="home">
+        <div style="background-color: #272343; padding: 40px; border-radius: 50%; transform: translateX(-50%); position: relative; left: 50%;">
+            <h1>Welcome to MY-Ecommerce</h1>
+            <p>Discover our amazing products and experience the best shopping experience.</p>
+        </div>
+    </section>
+
+    <h2>Our Products</h2>
+    <section id="products">
+        <!-- Existing products -->
+        
+        <!-- Additional products -->
+        <div class="product">
+            <img src="laptop.jpg" alt="Laptop">
+            <h3>Laptop</h3>
+            <p>Powerful laptops for work and entertainment.</p>
+            <button><a href="{{url_for('product',type='laptop')}}" style="color: #272343; text-decoration: none;" target="_blank">View more...</a></button>
+        </div>
+        
+        <div class="product">
+            <img src="tv.jpg" alt="TV">
+            <h3>TV</h3>
+            <p>High-definition TVs for an immersive viewing experience.</p>
+            <button><a href="{{url_for('product',type='tv')}}" style="color: #272343; text-decoration: none;" target="_blank">View more...</a></button>
+        </div>
+        
+        <div class="product">
+            <img src="speaker.jpg" alt="Speaker">
+            <h3>Speaker</h3>
+            <p>Immerse yourself in premium sound with our speakers.</p>
+            <button><a href="{{url_for('product',type='speaker')}}" style="color: #272343; text-decoration: none;" target="_blank">View more...</a></button>
+        </div>
+        
+        <div class="product">
+            <img src="headset.jpg" alt="Headset">
+            <h3>Headset</h3>
+            <p>Experience comfort and quality with our headsets.</p>
+            <button><a href="{{url_for('product',type='headset')}}" style="color: #272343; text-decoration: none;" target="_blank">View more...</a></button>
+        </div>
+        
+        <div class="product">
+            <img src="bluetooth.jpg" alt="Bluetooth">
+            <h3>Bluetooth</h3>
+            <p>Stay connected wirelessly with our Bluetooth devices.</p>
+            <button><a href="{{url_for('product',type='bluetooth')}}" style="color: #272343; text-decoration: none;" target="_blank">View more...</a></button>
+        </div>
+        
+        <div class="product">
+            <img src="pendrive.jpg" alt="Pendrive">
+            <h3>Pendrive</h3>
+            <p>Store your data securely with our high-speed pendrives.</p>
+            <button><a href="{{url_for('product',type='pendrive')}}" style="color: #272343; text-decoration: none;" target="_blank">View more...</a></button>
+        </div>
+        
+        <div class="product">
+            <img src="remote.jpg" alt="Remote">
+            <h3>Remote</h3>
+            <p>Control your devices with ease using our remote controls.</p>
+            <button><a href="{{url_for('product',type='remote')}}" style="color: #272343; text-decoration: none;" target="_blank">View more...</a></button>
+        </div>
+        <!-- End of Additional Products -->
+    </section>
+</main>
+
+</body>
+</html>
